@@ -5,22 +5,6 @@
 Decorators add functionality to a existing class. Its a flexible alternative to the creation of subclasses.
 
 
-```csharp
-[Test]
-public void ShouldReturnCachedValueWhenCalledMoreThanOnce()
-{
-    _componentMock.Setup(c => c.DoSomething("foo")).Returns("bar");
-
-    Assert.That(_cachingComponent.DoSomething("foo"), Is.EqualTo("bar"));
-    Assert.That(_cachingComponent.DoSomething("foo"), Is.EqualTo("bar"));
-    _componentMock.Verify(c => c.DoSomething("foo"), Times.Once());
-}
-```
-
-
-
-
-
 ```mermaid
 classDiagram
 linkStyle default interpolate stepAfter
