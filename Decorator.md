@@ -126,12 +126,11 @@ public static void Main()
     UiElement myButtonWithBorder = new ButtonWithBorder(myButton);
     myButtonWithBorder.Draw();
 
-    UiElement myButtonWithShadow = new SchnupfenDekorierer(myButton);
+    UiElement myButtonWithShadow = new ButtonWithShadow(myButton);
     myButtonWithShadow.Draw();
 
     # Decorator chaining
-    UiElement myButtonWithBorderAndShadow = new ButtonWithBorder(
-        									new ButtonWithShadow(myElement));
+    UiElement myButtonWithBorderAndShadow = new ButtonWithBorder(new ButtonWithShadow(myElement));
     myButtonWithBorderAndShadow.Draw();
 }
 ```
